@@ -1356,6 +1356,7 @@ class BotApi
         $parseMode = null,
         $messageThreadId = null,
         $protectContent = null,
+        $has_spoiler = null,
         $allowSendingWithoutReply = null
     ) {
         return Message::fromResponse($this->call('sendPhoto', [
@@ -1368,6 +1369,7 @@ class BotApi
             'disable_notification' => (bool) $disableNotification,
             'parse_mode' => $parseMode,
             'protect_content' => (bool) $protectContent,
+            'has_spoiler' => (bool) $has_spoiler,
             'allow_sending_without_reply' => (bool) $allowSendingWithoutReply,
         ]));
     }
